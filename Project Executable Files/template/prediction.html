@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style for the form container */
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+
+        }
+
+        /* Style for form row, containing two cells */
+        .form-row {
+            display: flex;
+            
+            margin-bottom: 10px;
+            
+            
+        }
+
+        /* Style for form input fields */
+        .form-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            
+            
+        }
+
+        /* Style for the submit button */
+        .form-submit {
+            background-color: #19b619;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: #29bed1;">
+    <center><h1>Doctor Salary Prediction</h1></center>
+    
+    <div class="form-container">
+        <form action="{{ url_for('result')}}" method="post">
+            <div class="form-row">
+                <input type="text" class="form-input" name='Specialty' placeholder="Specialty" >
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Feel Fairly Compensated' placeholder="Feel Fairly Compensated">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name='Overall Career Satisfaction' placeholder="Overall Career Satisfaction">
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Satisfied Income' placeholder="Satisfied Income">
+            </div>
+            <div class="form-row">
+                <input type="text" class="form-input" name='Would Choose Medicine Again' placeholder="Would Choose Medicine Again">
+                <input style="margin-left: 10px;" type="text" class="form-input" name='Would Choose the Same Specialty' placeholder="Would Choose the Same Specialty">
+            </div>
+<div class="form-row">
+                <input type="text" class="form-input" name="Survey Respondents by Specialty" placeholder="Survey Respondents by Specialty">
+            </div>
+            <Center><input type="submit" class="form-submit" value="Submit"></Center>
+        </form>
+    </div>
+</body>
+</html>

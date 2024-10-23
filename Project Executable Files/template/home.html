@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Salary</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background: rgb(140, 183, 239);
+            color: #fff;
+        }
+        #header{
+            width: 100%;
+            height: 100vh;
+            background-image: url("bk1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            padding: 10px 10%;
+        
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+        .logo{
+            width: 140 px;
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        nav ul li a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background:red;
+            position:absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        .header-text{
+            padding-right: 40px;
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+        
+            
+            
+        }
+        img{
+            border-radius: 30px;
+        }
+        
+        .header-text h1 span{
+            color:yellow;
+        }
+        .side{
+            padding: 60px;
+        }
+        .button{
+            height: 40px;
+            width: 120px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <h1 style="color: rgb(249, 6, 6);">MEDINOVA</h1>
+            <ul id="sidemenu">
+                    <li ><a style="color:rgb(255, 7, 7);" href="#HOME">HOME</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <img src="https://static.wixstatic.com/media/466cf4_44eccfbd3f8d4885a1dda1f60a727b14~mv2.jpg/v1/fill/w_438,h_348,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/466cf4_44eccfbd3f8d4885a1dda1f60a727b14~mv2.jpg" alt="" height="500px" width="500px">
+            <div class="side">
+                <h1 style="color: #fff;">BEST HEALTHCARE SOLUTIONS</h1>
+                <br>
+                <h1 style="color: #fff;">IN YOUR CITY</h1>
+                <br>
+                
+                
+                <br>
+                <form action="{{ url_for('happy')}}" method="post">
+                    <button style="background-color:blue; color:white;"class="button"  href="templates/Happy.html">
+                        Predict
+                    </button>
+                </form>
+
+            </div>
+            
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>
